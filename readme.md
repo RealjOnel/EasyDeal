@@ -1,0 +1,41 @@
+HTML PLACEHOLDER (das hier für jede einzelne neue Seitee einfügen, damit der Style rübergezogen wird):
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyDeal | Über Uns</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">Easy<span class="green-text">Deal</span></div>
+        <nav>
+            <ul class="nav-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="#" class="active">Über uns</a></li>
+                <li class="dropdown">
+                  <a href="#">Packs</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Starter Packs</a></li>
+                      <li><a href="#">Lifestyle Packs</a></li>
+                      <li><a href="#">Limited Edition</a></li>
+                    </ul>
+                 </li>
+              <li><a href="#">Qualität</a></li>
+              <li><a href="#">Mitarbeiter</a></li>
+             <li><a href="#" class="contact-btn">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+    </main>
+    
+</body>
+</html>
+
+BITTE BEACHTEN DAS MAN DIE LINKS UND DIE ACTIVE CLASS ENTSPRECHEND CHANGED!
