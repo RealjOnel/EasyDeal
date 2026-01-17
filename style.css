@@ -79,6 +79,76 @@ body {
     border-radius: 5px;
 }
 
+/* Drop Down Style im Header */
+
+.dropdown {
+    list-style: none !important;
+    position: relative;
+    padding: 10px 0;
+    margin: 0; 
+}
+
+.nav-links, 
+.nav-links ul {
+    list-style: none !important;
+    list-style-type: none !important;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu {
+    visibility: hidden;
+    opacity: 0;
+    display: block; 
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(15px); 
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    min-width: 200px;
+    border-radius: 12px;
+    padding: 15px 0 !important; 
+    z-index: 100;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+/* Hover-Effekt: Rein-Animation */
+.dropdown:hover .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0); /* Gleitet sanft hoch an seine Position */
+    pointer-events: auto;
+}
+
+/* Dropdown Links stylen */
+.dropdown-menu li {
+    margin: 0 !important; /* Reset der Header-Abstände */
+}
+
+.dropdown-menu a {
+    padding: 12px 25px;
+    display: block;
+    font-size: 0.95rem;
+    color: #bbb;
+    text-align: left;
+    transition: 0.2s;
+}
+
+/* Hover auf die einzelnen Links im Dropdown */
+.dropdown-menu a:hover {
+    background-color: #262626;
+    color: #2ecc71;
+    padding-left: 30px; /* Kleiner Slide-Effekt beim Hovern eines Links */
+}
+
+/* Entfernt den grünen Unterstrich für die Dropdown-Links */
+.dropdown-menu a::after {
+    display: none;
+}
+
 /* --- HERO SEKTION --- */
 .hero {
     height: 70vh;
