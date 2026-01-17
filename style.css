@@ -1,4 +1,8 @@
-/* Grund-Einstellungen */
+/* ==========================================================================
+   GLOBAL SETTINGS & RESET
+   (Gilt für JEDE Seite)
+   ========================================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,11 +16,16 @@ body {
     line-height: 1.6;
 }
 
+.green-text {
+    color: #2ecc71;
+}
+
 /* ==========================================================================
-   HOME PAGE 
+   GLOBAL COMPONENTS
+   (Header, Navigation, Dropdown, Buttons)
    ========================================================================== */
 
-/* --- HEADER & NAVIGATION --- */
+/* --- HEADER --- */
 .main-header {
     display: flex;
     justify-content: space-between;
@@ -33,10 +42,7 @@ body {
     text-transform: uppercase;
 }
 
-.green-text {
-    color: #2ecc71;
-}
-
+/* --- NAVIGATION LINKS --- */
 .nav-links {
     display: flex;
     list-style: none;
@@ -56,7 +62,6 @@ body {
     padding-bottom: 10px; 
 }
 
-/* Hover & Aktiv-Status */
 .nav-links a:hover {
     color: #2ecc71;
 }
@@ -76,15 +81,7 @@ body {
     border-radius: 2px;
 }
 
-/* Kontakt-Button im Header */
-.contact-btn {
-    border: 2px solid #2ecc71 !important;
-    padding: 8px 20px !important;
-    border-radius: 5px;
-}
-
-/* Drop Down Style im Header */
-
+/* --- DROPDOWN SYSTEM --- */
 .dropdown {
     list-style: none !important;
     position: relative;
@@ -119,7 +116,6 @@ body {
     pointer-events: none;
 }
 
-/* Hover-Effekt: Rein-Animation */
 .dropdown:hover .dropdown-menu {
     visibility: visible;
     opacity: 1;
@@ -127,7 +123,6 @@ body {
     pointer-events: auto;
 }
 
-/* Dropdown Links stylen */
 .dropdown-menu li {
     margin: 0 !important; /* Reset der Header-Abstände */
 }
@@ -141,17 +136,48 @@ body {
     transition: 0.2s;
 }
 
-/* Hover auf die einzelnen Links im Dropdown */
 .dropdown-menu a:hover {
     background-color: #262626;
     color: #2ecc71;
     padding-left: 30px; /* Kleiner Slide-Effekt beim Hovern eines Links */
 }
 
-/* Entfernt den grünen Unterstrich für die Dropdown-Links */
 .dropdown-menu a::after {
     display: none;
 }
+
+/* --- GLOBAL BUTTONS (Tilt-Effekt) --- */
+.cta-button, .contact-btn {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button {
+    padding: 15px 40px;
+    background-color: #2ecc71;
+    border: none;
+    color: #121212;
+    font-weight: bold;
+    border-radius: 50px;
+    font-size: 1.1rem;
+}
+
+.contact-btn {
+    border: 2px solid #2ecc71 !important;
+    padding: 8px 20px !important;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #bbb;
+}
+
+.cta-button:hover, .contact-btn:hover {
+    transform: rotate(-3deg) scale(1.1);
+    box-shadow: 0px 10px 20px rgba(46, 204, 113, 0.3);
+}
+
+/* ==========================================================================
+   HOME PAGE 
+   ========================================================================== */
 
 /* --- HERO SEKTION --- */
 .hero {
@@ -175,24 +201,6 @@ body {
     font-size: 1.2rem;
     color: #888;
     margin-bottom: 30px;
-}
-
-/* --- BUTTONS MIT TILT-EFFEKT --- */
-.cta-button {
-    padding: 15px 40px;
-    background-color: #2ecc71;
-    border: none;
-    color: #121212;
-    font-weight: bold;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cta-button:hover, .contact-btn:hover {
-    transform: rotate(-3deg) scale(1.1);
-    box-shadow: 0px 10px 20px rgba(46, 204, 113, 0.3);
 }
 
 /* --- ABOUT & STARTER SECTION --- */
