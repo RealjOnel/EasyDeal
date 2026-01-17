@@ -9,7 +9,6 @@ HTML PLACEHOLDER (das hier für jede einzelne neue Seitee einfügen, damit der S
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-
     <header class="main-header">
         <div class="logo">Easy<span class="green-text">Deal</span></div>
         <nav>
@@ -31,10 +30,8 @@ HTML PLACEHOLDER (das hier für jede einzelne neue Seitee einfügen, damit der S
         </nav>
     </header>
 
-    <main>
-
-    </main>
-    
+<main>
+</main>
 </body>
 </html>
 
