@@ -1,4 +1,5 @@
-HTML PLACEHOLDER (das hier für jede einzelne neue Seitee einfügen, damit der Style rübergezogen wird):
+HTML PLACEHOLDER (das hier für jede einzelne neue Seite einfügen, damit der Style rübergezogen wird):
+INNERHALB "MAIN" KANN MAN DANN DIE SPEZIFISCHE SEITEN KOMPONENTEN CODEN
 
 ```
 <!DOCTYPE html>
