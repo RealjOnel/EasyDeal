@@ -248,3 +248,97 @@ body {
 /* ==========================================================================
    ÜBER UNS PAGE 
    ========================================================================== */
+
+.about-content {
+    padding: 60px 8%;
+}
+
+.split-section {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    min-height: 70vh;
+}
+
+.text-side {
+    flex: 1.2;
+}
+
+.text-side h1 {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    line-height: 1.1;
+}
+
+.text-side p {
+    font-size: 1.15rem;
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+/* Feature Liste mit grünen Akzenten */
+.feature-list {
+    list-style: none !important;
+    margin-bottom: 35px !important;
+}
+
+.feature-list li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+    color: #eee;
+}
+
+.feature-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+/* Glass-Card Design für das "Bild" */
+.image-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.glass-card {
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.2) 0%, rgba(26, 26, 26, 0.8) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 60px 40px;
+    border-radius: 30px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    width: 100%;
+    max-width: 400px;
+}
+
+.card-tag {
+    background: #2ecc71;
+    color: #121212;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.glass-card h3 {
+    font-size: 2.2rem;
+    margin: 20px 0;
+}
+
+/* Responsive Anpassung für Handys */
+@media (max-width: 900px) {
+    .split-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    .feature-list li {
+        text-align: left;
+    }
+}
