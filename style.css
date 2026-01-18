@@ -305,26 +305,58 @@ body {
 
 /* --- HERO SEKTION --- */
 .hero {
-    height: 70vh;
+    position: relative; 
+    height: 80vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    background: #121212;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10; /* Text über die Bilder legen */
     text-align: center;
-    background: radial-gradient(circle, #1a1a1a 0%, #121212 100%);
-    padding: 0 20px;
 }
 
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 10px;
-    font-weight: 800;
+.hero-content button {
+    margin-top: 15px;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    color: #888;
-    margin-bottom: 30px;
+.hero-bg-gallery {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%; 
+    z-index: 1;
+    opacity: 0.3; 
+    pointer-events: none; 
+    filter: blur(4px); 
+}
+
+.marquee {
+    display: flex;
+    gap: 40px;
+    animation: scroll-left 40s linear infinite;
+}
+
+.marquee-group {
+    display: flex;
+    gap: 40px;
+}
+
+.marquee img {
+    width: 350px; 
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+@keyframes scroll-left {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
 }
 
 /* --- EASY FINDER SECTION --- */
