@@ -176,6 +176,119 @@ body {
 }
 
 /* ==========================================================================
+   GLOBAL FOOTER
+   ========================================================================== */
+
+.main-footer {
+    background-color: #1a1a1a;
+    border-top: 1px solid #333;
+    padding: 60px 8% 20px;
+    margin-top: 80px; /* Abstand zum Inhalt darüber */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Wichtig für Handy-Ansicht */
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+/* Kleiner grüner Strich unter den Footer-Überschriften */
+.footer-section h3::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #2ecc71;
+    margin-top: 8px;
+}
+
+.footer-section p {
+    color: #bbb;
+    font-size: 0.95rem;
+}
+
+.footer-section ul {
+    list-style: none !important;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #bbb;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #2ecc71;
+    padding-left: 5px;
+}
+
+/* Social Media Buttons */
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-btn {
+    text-decoration: none;
+    color: #bbb;
+    background: #222;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+.social-btn:hover {
+    background: #2ecc71;
+    color: #121212;
+    transform: translateY(-3px);
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+    color: #555;
+    font-size: 0.85rem;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-section h3::after {
+        margin: 8px auto 0;
+    }
+    .social-icons {
+        align-items: center;
+    }
+}
+
+/* ==========================================================================
    HOME PAGE 
    ========================================================================== */
 
