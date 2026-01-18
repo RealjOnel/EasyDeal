@@ -379,6 +379,10 @@ body {
     padding: 60px 8%;
     display: flex;
     justify-content: center;
+    background-color: #161616;
+    padding: 100px 8%;
+    position: relative;
+    z-index: 5;
 }
 
 .finder-card {
@@ -429,7 +433,6 @@ body {
 /* --- ABOUT & STARTER SECTION --- */
 .about-section {
     text-align: center;
-    background-color: #161616; /* Ganz leicht heller als das absolute Schwarz */
     padding: 100px 8%;
     position: relative;
     z-index: 5;
