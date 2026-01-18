@@ -36,7 +36,24 @@
             <button class="cta-button">Jetzt entdecken</button>
         </section>
 
-        <section class="about-section">
+        <section class="finder-section">
+            <div class="finder-card">
+                <h2 id="finder-question">Wie möchtest du heute entspannen?</h2>
+                <div id="finder-options" class="finder-options">
+                    <button class="opt-btn" onclick="nextStep('beginner')">Ich bin Anfänger</button>
+                    <button class="opt-btn" onclick="nextStep('pro')">Ich bin Kenner</button>
+                </div>
+            <div id="finder-result" class="result-box" style="display: none;">
+                <p>Unsere Empfehlung für dich:</p>
+                <h3 id="recommended-pack">Starter Pack</h3>
+                <button class="cta-button">Direkt zum Produkt</button>
+                <br>
+                    <a href="javascript:void(0)" onclick="resetFinder()" style="color: #555; font-size: 0.8rem; text-decoration: none; margin-top: 15px; display: inline-block;">Nochmal von vorn</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section reveal">
             <div class="about-container">
                 <h2>Mehr als nur Standard</h2>
                 <p>
@@ -45,13 +62,16 @@
                     Kein Drehen, kein Stress – einfach auspacken und dein Erlebnis genießen.
                 </p>
                 
-                <div class="starter-box">
+                <div class="starter-box reveal">
                     <h3>Du bist dir noch nicht sicher?</h3>
                     <p>Dann probiere unser <strong>Starter Pack</strong> zum Vorteilspreis!</p>
                     <button class="cta-button">Zum Starter Pack</button>
                 </div>
             </div>
         </section>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/finder.js"></script>
     </main>
     <footer class="main-footer">
     <div class="footer-container">

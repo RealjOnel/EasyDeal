@@ -20,6 +20,17 @@ body {
     color: #2ecc71;
 }
 
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* ==========================================================================
    GLOBAL COMPONENTS
    (Header, Navigation, Dropdown, Buttons)
@@ -314,6 +325,59 @@ body {
     font-size: 1.2rem;
     color: #888;
     margin-bottom: 30px;
+}
+
+/* --- EASY FINDER SECTION --- */
+
+.finder-section {
+    padding: 60px 8%;
+    display: flex;
+    justify-content: center;
+}
+
+.finder-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.finder-options {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.opt-btn {
+    background: transparent;
+    border: 2px solid #2ecc71;
+    color: #2ecc71;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.opt-btn:hover {
+    background: #2ecc71;
+    color: #121212;
+}
+
+.result-box {
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+.result-box h3 {
+    font-size: 2rem;
+    color: #2ecc71;
+    margin: 15px 0;
 }
 
 /* --- ABOUT & STARTER SECTION --- */
