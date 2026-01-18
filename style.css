@@ -696,3 +696,36 @@ body {
         top: 0;
     }
 }
+
+.ready-banner {
+    margin: 80px 8% 40px; /* Abstand zum Footer */
+    padding: 60px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+    border: 1px solid #333;
+    border-radius: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.ready-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(46, 204, 113, 0.1), transparent 60%);
+    pointer-events: none;
+}
+
+.ready-banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.ready-banner p {
+    color: #bbb;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
