@@ -570,3 +570,129 @@ body {
         text-align: left;
     }
 }
+
+/* --- WERTE SEKTION (Grid) --- */
+.values-section {
+    padding: 80px 8%;
+    background-color: #161616; /* Leichter Kontrast zum Background */
+    text-align: center;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #888;
+    margin-bottom: 50px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatisch responsive */
+    gap: 30px;
+}
+
+.value-card {
+    background: #1a1a1a;
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    transition: 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    border-color: #2ecc71;
+    box-shadow: 0 10px 30px rgba(46, 204, 113, 0.1);
+}
+
+.value-card .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.value-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.value-card p {
+    color: #bbb;
+    font-size: 0.95rem;
+}
+
+/* --- PROZESS SEKTION (Steps) --- */
+.process-section {
+    padding: 100px 8%;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #121212 100%);
+    text-align: center;
+}
+
+.process-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    flex-wrap: wrap; /* Für Mobile */
+    gap: 20px;
+}
+
+.process-step {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.step-number {
+    display: block;
+    font-size: 4rem;
+    font-weight: 900;
+    color: #222; /* Sehr dunkel im Hintergrund */
+    margin-bottom: -20px; /* Überlappt leicht mit dem Text */
+    transition: 0.3s;
+}
+
+.process-step:hover .step-number {
+    color: rgba(46, 204, 113, 0.2); /* Leuchtet grün beim Hover */
+    transform: scale(1.1);
+}
+
+.process-step h3 {
+    font-size: 1.8rem;
+    color: #2ecc71;
+    margin-bottom: 10px;
+}
+
+.process-step p {
+    color: #aaa;
+}
+
+/* Die Verbindungslinie zwischen den Steps */
+.step-line {
+    flex: 0.5;
+    height: 2px;
+    background: #333;
+    position: relative;
+    top: -20px; /* Ausrichtung anpassen */
+}
+
+/* Responsive Anpassung für Handys */
+@media (max-width: 768px) {
+    .process-container {
+        flex-direction: column;
+    }
+    .step-line {
+        width: 2px;
+        height: 50px; /* Vertikale Linie auf Handy */
+        flex: none;
+        margin: 10px 0;
+        top: 0;
+    }
+}
