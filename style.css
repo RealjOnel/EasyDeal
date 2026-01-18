@@ -305,13 +305,27 @@ body {
 
 /* --- HERO SEKTION --- */
 .hero {
-    position: relative; 
-    height: 80vh;
+    position: relative;
+    height: 85vh; /* Etwas höher für mehr Impact */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background: #121212;
+    /* Der alte Verlauf: Außen dunkel, innen leicht aufgehellt */
+    background: radial-gradient(circle, #1a1a1a 0%, #121212 100%);
+    border-bottom: 1px solid #333; /* Eine feine Linie zur Trennung */
+}
+
+/* Ein Overlay, das die Bilder nach unten hin "ausfadet" */
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; /* Nur der untere Teil */
+    background: linear-gradient(to top, #121212, transparent);
+    z-index: 2; /* Über den Bildern, unter dem Text */
 }
 
 .hero-content {
@@ -414,9 +428,11 @@ body {
 
 /* --- ABOUT & STARTER SECTION --- */
 .about-section {
-    padding: 100px 10%;
-    background-color: #121212;
     text-align: center;
+    background-color: #161616; /* Ganz leicht heller als das absolute Schwarz */
+    padding: 100px 8%;
+    position: relative;
+    z-index: 5;
 }
 
 .about-container h2 {
