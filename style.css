@@ -31,6 +31,15 @@ body {
     transform: translateY(0);
 }
 
+.bg-glow {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: 
+        radial-gradient(circle at 15% 20%, rgba(46, 204, 113, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(46, 204, 113, 0.08) 0%, transparent 40%);
+    z-index: -1; pointer-events: none;
+}
+
 /* ==========================================================================
    GLOBAL COMPONENTS
    (Header, Navigation, Dropdown, Buttons)
@@ -840,4 +849,142 @@ body {
 @media (max-width: 1100px) {
     .top-leaders-row { grid-template-columns: 1fr; }
     .member-card.leader, .leader-small-wide { flex-direction: column; text-align: center; }
+}
+
+/* ==========================================================================
+   QUALITÄTS PAGE
+   ========================================================================== */
+
+/* --- QUALITY CONTENT LAYOUT --- */
+.quality-content {
+    padding: 80px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.quality-hero {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.quality-hero h1 { font-size: 3.5rem; margin-bottom: 15px; }
+.quality-hero p { color: #888; font-size: 1.2rem; }
+
+/* --- PIERRE SCHOLZ SECTION (EXPERT FEATURE) --- */
+.expert-glass-card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 35px;
+    padding: 60px;
+    margin-bottom: 120px;
+}
+
+.expert-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.expert-text { flex: 1; }
+.position-tag {
+    color: #2ecc71;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.expert-text h2 { font-size: 3rem; line-height: 1.1; margin: 20px 0; }
+
+.expert-text p {
+    color: #aaa; line-height: 1.8; font-size: 1.1rem;
+    margin-bottom: 30px; max-width: 550px;
+}
+
+.expert-checklist { list-style: none; }
+.expert-checklist li {
+    margin-bottom: 15px; padding-left: 30px;
+    position: relative; color: #fff; font-size: 1rem;
+}
+
+.expert-checklist li::before {
+    content: "→"; position: absolute; left: 0; color: #2ecc71; font-weight: bold;
+}
+
+.expert-visual {
+    width: 300px; height: 400px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 25px;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.visual-icon { font-size: 6rem; opacity: 0.2; }
+
+/* --- QUALITY GRID SECTION --- */
+.quality-flex-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.quality-card.premium-glass {
+    flex: 0 1 calc(50% - 40px); 
+    min-width: 320px; 
+    max-width: 500px; 
+}
+
+@media (max-width: 850px) {
+    .quality-card.premium-glass {
+        flex: 1 1 100%; 
+    }
+}
+
+.quality-header { text-align: center; margin-bottom: 80px; }
+.section-title { font-size: 2.2rem; letter-spacing: 4px; text-transform: uppercase; }
+.title-underline {
+    width: 60px; height: 3px; background: #2ecc71;
+    margin: 20px auto 0; border-radius: 2px;
+}
+
+.premium-glass {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%) !important;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 60px 40px;
+    border-radius: 35px;
+    text-align: center;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.premium-glass:hover {
+    transform: translateY(-15px);
+    border-color: rgba(46, 204, 113, 0.4) !important;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.icon-wrapper {
+    width: 100px; height: 100px;
+    background: radial-gradient(circle, rgba(46, 204, 113, 0.15) 0%, transparent 70%);
+    margin: 0 auto 35px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%; border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.icon-inner { font-size: 2.5rem; filter: drop-shadow(0 0 10px rgba(46, 204, 113, 0.3)); }
+
+.premium-glass h3 { font-size: 1.8rem; margin-bottom: 20px; }
+.premium-glass p { color: #999; line-height: 1.8; font-size: 1.05rem; }
+
+/* --- RESPONSIVE FIXES --- */
+@media (max-width: 950px) {
+    .expert-content-wrapper { flex-direction: column; text-align: center; }
+    .expert-text p { margin-left: auto; margin-right: auto; }
+    .expert-visual { width: 100%; height: 250px; }
+    .expert-checklist li { text-align: left; }
+    .quality-hero h1 { font-size: 2.5rem; }
 }
