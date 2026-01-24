@@ -1100,3 +1100,184 @@ body {
     .timeline::before { left: 10px; }
     .timeline-number { left: -35px; width: 30px; height: 30px; font-size: 0.7rem; }
 }
+
+/* ==========================================================================
+   PACKS PAGE (OVERALL)
+   ========================================================================== */
+
+/* --- PACKS PAGE STYLES --- */
+.packs-page {
+    padding: 100px 5%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Zentrierung des Headers */
+.center-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+
+.main-headline {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.hero-subtext {
+    color: #888;
+    font-size: 1.1rem;
+}
+
+/* Grid System */
+.packs-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+}
+
+/* Card Styling */
+.pack-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.pack-card:hover {
+    transform: translateY(-12px);
+    border-color: rgba(46, 204, 113, 0.4);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+/* Bildbereich */
+.pack-image-container {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+
+.pack-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: transform 0.6s, opacity 0.6s;
+}
+
+.pack-card:hover .pack-image-container img {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.stats-badge {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 6px 14px;
+    border-radius: 10px;
+    border: 1px solid #2ecc71;
+    color: #2ecc71;
+    font-size: 0.75rem;
+    font-weight: 800;
+    z-index: 2;
+}
+
+/* Content Bereich */
+.pack-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.category {
+    color: #2ecc71;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.pack-content h3 {
+    font-size: 1.5rem;
+    margin: 10px 0 20px;
+    color: #fff;
+}
+
+/* Specs */
+.specs-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    margin-bottom: 25px;
+}
+
+.spec {
+    font-size: 0.8rem;
+    color: #aaa;
+    text-align: center;
+}
+
+.spec strong {
+    display: block;
+    color: #2ecc71;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+/* Footer */
+.price-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.price-tag {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.details-btn {
+    padding: 10px 22px;
+    border: 1px solid #2ecc71;
+    color: #2ecc71;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.details-btn:hover {
+    background: #2ecc71;
+    color: #000;
+}
+
+/* Exotic & Gold Styles */
+.exotic-border {
+    border: 1px solid rgba(241, 196, 15, 0.2);
+}
+
+.highlight-text { color: #f1c40f; }
+.gold-text { color: #f1c40f; text-shadow: 0 0 10px rgba(241, 196, 15, 0.3); }
+.stats-badge.highlight { border-color: #f1c40f; color: #f1c40f; }
+.highlight-btn { border-color: #f1c40f; color: #f1c40f; }
+.highlight-btn:hover { background: #f1c40f; color: #000; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .packs-grid-layout { grid-template-columns: 1fr; }
+}

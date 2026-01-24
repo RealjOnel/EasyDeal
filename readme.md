@@ -11,22 +11,23 @@ INNERHALB "MAIN" KANN MAN DANN DIE SPEZIFISCHE SEITEN KOMPONENTEN CODEN
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    
     <header class="main-header">
         <div class="logo">Easy<span class="green-text">Deal</span></div>
         <nav>
             <ul class="nav-links">
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="#" class="active">Über uns</a></li>
+              <li><a href="../index.html" class="active">Home</a></li>
+              <li><a href="../Other Pages/überuns.html">Über uns</a></li>
                 <li class="dropdown">
-                  <a href="#">Packs</a>
+                  <a href="./Packs Pages/main.html">Packs</a>
                     <ul class="dropdown-menu">
                       <li><a href="#">Starter Packs</a></li>
                       <li><a href="#">Lifestyle Packs</a></li>
                       <li><a href="#">Limited Edition</a></li>
                     </ul>
                  </li>
-              <li><a href="#">Qualität</a></li>
-              <li><a href="#">Mitarbeiter</a></li>
+              <li><a href="../Other Pages/quality.html">Qualität</a></li>
+              <li><a href="../Other Pages/mitarbeiter.html">Mitarbeiter</a></li>
              <li><a href="#" class="contact-btn">Kontakt</a></li>
             </ul>
         </nav>
